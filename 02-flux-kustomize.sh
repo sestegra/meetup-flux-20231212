@@ -79,5 +79,9 @@ p "# Check PodInfo deployment rollout"
 pe "kubectl get pods -n $NAMESPACE --watch"
 p "# Open PodInfo https://$URL"
 
+echo
+echo
+p "# Do the same for Helm"
+
 wait
 end_demo
