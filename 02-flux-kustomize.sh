@@ -69,7 +69,6 @@ p "# Open PodInfo https://$URL"
 
 p "# Update PodInfo kustomization resource for PodInfo"
 pe "code git/kustomize-podinfo.yaml"
-
 p "# Apply kustomization resource"
 pe "kubectl apply -f git/kustomize-podinfo.yaml"
 p "# Check PodInfo deployment rollout"

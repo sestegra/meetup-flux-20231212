@@ -76,6 +76,15 @@ pe "flux get kustomizations podinfo"
 p "# Check PodInfo deployment (no rolling update)"
 pe "kubectl get pod -n $NAMESPACE"
 
+URL=$(kubectl get ingress -n $NAMESPACE podinfo -o jsonpath='{.spec.rules[0].host}')
+p "# Update PodInfo kustomization resource for PodInfo"
+pe "code oci/kustomize-podinfo.yaml"
+p "# Apply kustomization resource"
+pe "kubectl apply -f oci/kustomize-podinfo.yaml"
+p "# Check PodInfo deployment rollout"
+pe "kubectl get pods -n $NAMESPACE --watch"
+p "# Open PodInfo https://$URL"
+
 echo
 echo
 p "# Do the same for Helm"

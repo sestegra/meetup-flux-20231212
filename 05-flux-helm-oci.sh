@@ -68,6 +68,15 @@ pe "flux get helmrelease podinfo"
 p "# Check PodInfo deployment (no rolling update)"
 pe "kubectl get pod -n $NAMESPACE"
 
+URL=$(kubectl get ingress -n $NAMESPACE podinfo-helm-podinfo -o jsonpath='{.spec.rules[0].host}')
+p "# Update PodInfo HelmRelease resource"
+pe "code oci/helmrelease-podinfo.yaml"
+p "# Apply HelmRelease resource"
+pe "kubectl apply -f oci/helmrelease-podinfo.yaml"
+p "# Check PodInfo deployment rollout"
+pe "kubectl get pods -n $NAMESPACE --watch"
+p "# Open PodInfo https://$URL"
+
 echo
 echo
 p "# Go back to slides"
