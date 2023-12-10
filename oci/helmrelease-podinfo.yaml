@@ -8,9 +8,10 @@ spec:
   chart:
     spec:
       sourceRef:
-        kind: GitRepository
+        kind: HelmRepository
         name: podinfo
-      chart: ./charts/podinfo
+      chart: podinfo
+      version: 6.5.3
       reconcileStrategy: Revision
   interval: 1m0s
   targetNamespace: podinfo-helm

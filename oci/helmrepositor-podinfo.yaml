@@ -1,0 +1,13 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: podinfo
+  namespace: flux-system
+spec:
+  type: oci
+  provider: generic
+  url: oci://registry.my.labs/helm
+  certSecretRef:
+    name: labs-root-ca
+  interval: 1m0s
