@@ -26,6 +26,7 @@ start_demo
 
 p "# Kubernetes already configured by Platform team"
 pe "kubectl get pods -A"
+pe "kubectl get ns | grep podinfo"
 
 p "# PodInfo Git repository"
 p "# https://gitlab.my.labs/labs-group/labs-project"

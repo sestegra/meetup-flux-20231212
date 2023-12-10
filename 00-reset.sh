@@ -2,9 +2,7 @@
 
 flux delete -s source git podinfo
 flux delete -s kustomization podinfo
-watch dig +short podinfo-kustomize.my.labs
-
-# TODO Helm
+flux delete -s helmrelease podinfo
 
 kubectl delete ns podinfo-kustomize
 kubectl delete ns podinfo-helm
