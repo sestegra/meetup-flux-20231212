@@ -9,4 +9,10 @@ spec:
   provider: generic
   ref:
     tag: local
-  url: oci://registry.my.labs/flux/podinfo-kustomize
+  url: oci://registry.my.labs/gitops/podinfo
+  certSecretRef:
+    name: labs-root-ca
+  verify:
+    provider: cosign
+    secretRef:
+      name: cosign-pub
