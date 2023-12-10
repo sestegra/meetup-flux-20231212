@@ -3,6 +3,8 @@
 flux delete -s source git podinfo
 flux delete -s kustomization podinfo
 flux delete -s helmrelease podinfo
+flux delete -s source oci podinfo
+flux delete -s source helm podinfo
 
 kubectl delete ns podinfo-kustomize
 kubectl delete ns podinfo-helm
