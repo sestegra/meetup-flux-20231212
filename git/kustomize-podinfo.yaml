@@ -16,5 +16,5 @@ spec:
   postBuild:
     substitute:
       host: "podinfo-kustomize.my.labs"
-      podinfo_ui_color: "\"#000000\""
+      # podinfo_ui_color: "\"#000000\""
       podinfo_ui_message: "Podinfo Kustomize"

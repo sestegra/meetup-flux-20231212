@@ -16,7 +16,7 @@ spec:
   targetNamespace: podinfo-helm
   values:
     ui:
-      color: "#808080"
+      # color: "#808080"
       message: "Podinfo Helm"
     ingress:
       enabled: true
