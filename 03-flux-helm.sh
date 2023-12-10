@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-REGISTRY_URL="registry.my.labs"
-REPOSITORY="images/podinfo"
-TAG="6.5.3"
-PLATFORM="linux/amd64"
 NAMESPACE=$(yq -r '.spec.targetNamespace' git/helmrelease-podinfo.yaml)
 
 # Test if DEMO_MAGIC is set

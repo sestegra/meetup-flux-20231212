@@ -8,7 +8,7 @@ spec:
   interval: 1m0s
   provider: generic
   ref:
-    tag: local
+    tag: 6.5.3
   url: oci://registry.my.labs/gitops/podinfo
   certSecretRef:
     name: labs-root-ca
